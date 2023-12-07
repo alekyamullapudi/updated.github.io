@@ -34,13 +34,34 @@
         button {
             padding: 10px;
             cursor: pointer;
-            background-color: #4caf50;
-            color: #fff;
             border: none;
         }
 
-        button:hover {
+        button.home {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        button.home:hover {
             background-color: #45a049;
+        }
+
+        button.cart {
+            background-color: #2196F3;
+            color: #fff;
+        }
+
+        button.cart:hover {
+            background-color: #0b7dda;
+        }
+
+        button.login {
+            background-color: #555;
+            color: #fff;
+        }
+
+        button.login:hover {
+            background-color: #444;
         }
 
         #cart {
@@ -58,12 +79,6 @@
             padding: 10px;
             border-bottom: 1px solid #ddd;
         }
-        
-        /* Adjusted button style for better contrast */
-        button.home {
-            color: #333;
-            background-color: #fff;
-        }
     </style>
 </head>
 <body>
@@ -74,10 +89,9 @@
 
 <main>
     <div>
-        <!-- Added home class to the Home button for adjusted style -->
         <button class="home" onclick="showProducts()">Home</button>
-        <button onclick="showCart()">Cart</button>
-        <button onclick="login()">Login</button>
+        <button class="cart" onclick="showCart()">Cart</button>
+        <button class="login" onclick="login()">Login</button>
     </div>
 
     <div id="products">
@@ -86,14 +100,14 @@
             <h2>Product 1</h2>
             <p>Description of Product 1.</p>
             <p>$19.99</p>
-            <button onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
+            <button class="home" onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
         </div>
 
         <div class="product">
             <h2>Product 2</h2>
             <p>Description of Product 2.</p>
             <p>$29.99</p>
-            <button onclick="addToCart('Product 2', 29.99)">Add to Cart</button>
+            <button class="home" onclick="addToCart('Product 2', 29.99)">Add to Cart</button>
         </div>
     </div>
 
@@ -101,7 +115,7 @@
         <h2>Shopping Cart</h2>
         <ul id="cartContent"></ul>
         <p>Total: $<span id="total">0.00</span></p>
-        <button onclick="checkout()">Checkout</button>
+        <button class="cart" onclick="checkout()">Checkout</button>
     </div>
 </main>
 
