@@ -37,32 +37,31 @@
             border: none;
         }
 
-        /* Improved button styles for better contrast */
-        button.home,
-        button.cart,
-        button.login,
-        button.addToCart {
+        button.home {
+            background-color: #4caf50;
             color: #fff;
         }
 
-        button.home,
         button.home:hover {
-            background-color: #4caf50;
+            background-color: #45a049;
         }
 
-        button.cart,
-        button.cart:hover {
+        button.cart {
             background-color: #2196F3;
+            color: #fff;
         }
 
-        button.login,
-        button.login:hover {
+        button.cart:hover {
+            background-color: #0b7dda;
+        }
+
+        button.login {
             background-color: #555;
+            color: #fff;
         }
 
-        button.addToCart,
-        button.addToCart:hover {
-            background-color: #4caf50;
+        button.login:hover {
+            background-color: #444;
         }
 
         #cart {
@@ -101,14 +100,14 @@
             <h2>Product 1</h2>
             <p>Description of Product 1.</p>
             <p>$19.99</p>
-            <button class="addToCart" onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
+            <button class="home" onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
         </div>
 
         <div class="product">
             <h2>Product 2</h2>
             <p>Description of Product 2.</p>
             <p>$29.99</p>
-            <button class="addToCart" onclick="addToCart('Product 2', 29.99)">Add to Cart</button>
+            <button class="home" onclick="addToCart('Product 2', 29.99)">Add to Cart</button>
         </div>
     </div>
 
